@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: Reality Capture API
+  version: 0.1.0
+servers:
+- url: http://localhost:7030
+paths:
+  /healthz:
+    get:
+      responses:
+        '200':
+          description: ok
+  /v1/capture-plans:
+    post:
+      responses:
+        '201':
+          description: created
+  /v1/ingest/tripod:
+    post:
+      responses:
+        '202':
+          description: accepted
+  /v1/ingest/drone:
+    post:
+      responses:
+        '202':
+          description: accepted
+  /v1/process/photogrammetry:
+    post:
+      responses:
+        '202':
+          description: accepted
+  /v1/process/register:
+    post:
+      responses:
+        '202':
+          description: accepted
+  /v1/export/tiles:
+    post:
+      responses:
+        '200':
+          description: ok
+  /v1/jobs/{job_id}:
+    get:
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ok

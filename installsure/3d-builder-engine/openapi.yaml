@@ -1,0 +1,43 @@
+openapi: 3.0.3
+info:
+  title: 3D Builder API
+  version: 0.1.0
+servers:
+- url: http://localhost:7010
+paths:
+  /healthz:
+    get:
+      responses:
+        '200':
+          description: ok
+  /v1/projects:
+    post:
+      responses:
+        '200':
+          description: ok
+  /v1/import/blueprints:
+    post:
+      responses:
+        '202':
+          description: accepted
+  /v1/build/model:
+    post:
+      responses:
+        '202':
+          description: accepted
+  /v1/projects/{pid}/artifacts:
+    get:
+      parameters:
+      - name: pid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ok
+  /v1/viewer/token:
+    get:
+      responses:
+        '200':
+          description: ok

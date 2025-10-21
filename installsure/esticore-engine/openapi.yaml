@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: EstiCore API
+  version: 0.1.0
+servers:
+- url: http://localhost:7020
+paths:
+  /healthz:
+    get:
+      responses:
+        '200':
+          description: ok
+  /v1/qto/run:
+    post:
+      responses:
+        '202':
+          description: accepted
+  /v1/qto/{job_id}/status:
+    get:
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ok
+  /v1/qto/{job_id}/results:
+    get:
+      parameters:
+      - name: job_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ok

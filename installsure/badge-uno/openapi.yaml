@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: Badge+UNO API
+  version: 0.1.0
+servers:
+- url: http://localhost:7060
+paths:
+  /healthz:
+    get:
+      responses:
+        '200':
+          description: ok
+  /v1/parse:
+    post:
+      responses:
+        '200':
+          description: ok
+  /v1/emit:
+    post:
+      responses:
+        '200':
+          description: ok
+  /v1/fix:
+    post:
+      responses:
+        '200':
+          description: ok

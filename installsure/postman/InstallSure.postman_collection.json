@@ -1,0 +1,288 @@
+{
+  "info": {
+    "name": "InstallSure Ecosystem",
+    "_postman_id": "11111111-2222-3333-4444-555555555555",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "JarvisOps",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{JARVIS}}/healthz",
+              "host": [
+                "{{JARVIS}}/healthz"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Plan",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{JARVIS}}/v1/plan",
+              "host": [
+                "{{JARVIS}}/v1/plan"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"goal\": \"demo\"}"
+            }
+          }
+        },
+        {
+          "name": "Run",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{JARVIS}}/v1/run",
+              "host": [
+                "{{JARVIS}}/v1/run"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"plan_id\": \"demo\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Builder",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BUILDER}}/healthz",
+              "host": [
+                "{{BUILDER}}/healthz"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Project",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BUILDER}}/v1/projects",
+              "host": [
+                "{{BUILDER}}/v1/projects"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Demo\"}"
+            }
+          }
+        },
+        {
+          "name": "Build Model",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BUILDER}}/v1/build/model",
+              "host": [
+                "{{BUILDER}}/v1/build/model"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"project_id\": \"demo\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EstiCore",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ESTICORE}}/healthz",
+              "host": [
+                "{{ESTICORE}}/healthz"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Run QTO",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{ESTICORE}}/v1/qto/run",
+              "host": [
+                "{{ESTICORE}}/v1/qto/run"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"project_id\": \"demo\", \"ifc_url\": \"s3://bucket.ifc\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reality Capture",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{RC}}/healthz",
+              "host": [
+                "{{RC}}/healthz"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Photogrammetry",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{RC}}/v1/process/photogrammetry",
+              "host": [
+                "{{RC}}/v1/process/photogrammetry"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"project_id\": \"demo\", \"quality\": \"medium\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "AtlasSearch",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{ATLAS}}/healthz",
+              "host": [
+                "{{ATLAS}}/healthz"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Start Research",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{ATLAS}}/v1/research/start",
+              "host": [
+                "{{ATLAS}}/v1/research/start"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"topic\": \"demo\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SentinelGuard",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{SENTINEL}}/healthz",
+              "host": [
+                "{{SENTINEL}}/healthz"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Scan Repo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{SENTINEL}}/v1/scan/repo",
+              "host": [
+                "{{SENTINEL}}/v1/scan/repo"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"repo_url\": \"https://example.com\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Badge+UNO",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BADGE}}/healthz",
+              "host": [
+                "{{BADGE}}/healthz"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Parse",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BADGE}}/v1/parse",
+              "host": [
+                "{{BADGE}}/v1/parse"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"source\": \"print('hi')\", \"lang\": \"python\"}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+openapi: 3.0.3
+info:
+  title: SentinelGuard API
+  version: 0.1.0
+servers:
+- url: http://localhost:7050
+paths:
+  /healthz:
+    get:
+      responses:
+        '200':
+          description: ok
+  /v1/scan/system:
+    post:
+      responses:
+        '200':
+          description: ok
+  /v1/scan/repo:
+    post:
+      responses:
+        '200':
+          description: ok
+  /v1/reports/{rid}:
+    get:
+      parameters:
+      - name: rid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ok
+  /v1/enforce/quarantine:
+    post:
+      responses:
+        '200':
+          description: ok

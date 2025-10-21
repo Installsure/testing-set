@@ -1,0 +1,11 @@
+{
+  "effects": [
+    "pure",
+    "fs",
+    "net",
+    "db",
+    "crypto",
+    "time",
+    "random"
+  ]
+}

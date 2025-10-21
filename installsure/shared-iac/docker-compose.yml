@@ -1,0 +1,22 @@
+services:
+  jarvisops:
+    build: ../jarvisops
+    ports: ["8010:8000"]
+  builder:
+    build: ../3d-builder-engine
+    ports: ["7010:8000"]
+  esticore:
+    build: ../esticore-engine
+    ports: ["7020:8000"]
+  rc:
+    build: ../reality-capture-engine
+    ports: ["7030:8000"]
+  atlassearch:
+    build: ../atlassearch
+    ports: ["7040:8000"]
+  sentinelguard:
+    build: ../sentinelguard
+    ports: ["7050:8000"]
+  badgeuno:
+    build: ../badge-uno
+    ports: ["7060:8000"]

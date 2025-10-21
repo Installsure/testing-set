@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: AtlasSearch API
+  version: 0.1.0
+servers:
+- url: http://localhost:7040
+paths:
+  /healthz:
+    get:
+      responses:
+        '200':
+          description: ok
+  /v1/research/start:
+    post:
+      responses:
+        '200':
+          description: ok
+  /v1/research/{rid}/status:
+    get:
+      parameters:
+      - name: rid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ok
+  /v1/research/{rid}/brief:
+    get:
+      parameters:
+      - name: rid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ok
